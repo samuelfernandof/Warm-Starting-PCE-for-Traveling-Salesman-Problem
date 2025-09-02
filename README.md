@@ -10,7 +10,7 @@ This implementation presents a novel approach combining:
 - **Warm-starting** with Goemans-Williamson classical initialization
 - **Hybrid post-processing** using bit-flip local search
 
-## Key Results
+## Results
 
 - **64%** success rate with warm-starting vs **26%** standard approach
 - **98.3%** approximation ratio at optimal parameters
