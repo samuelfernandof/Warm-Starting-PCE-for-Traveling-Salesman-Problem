@@ -1,5 +1,3 @@
-# VQE-Multi-basis-TSP-MaxCut-Performance-Analysis
-
 # VQE Multi-basis TSP-MaxCut
 
 A quantum optimization framework implementing Variational Quantum Eigensolver (VQE) with multi-basis encoding to solve the Traveling Salesman Problem (TSP) via conversion to Maximum Cut (MaxCut).
