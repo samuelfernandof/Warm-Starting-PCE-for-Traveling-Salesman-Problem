@@ -95,7 +95,7 @@ Reduces qubit count by encoding multiple binary variables per physical qubit:
 - **Backend**: AerSimulator with optional IBM hardware
 - **Optimizer**: COBYLA with 1000 max iterations
 
-- ## Performance Analysis
+## Performance Analysis
 
 ### Methodology Comparison
 
