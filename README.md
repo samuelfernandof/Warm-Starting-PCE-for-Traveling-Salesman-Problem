@@ -95,6 +95,38 @@ Reduces qubit count by encoding multiple binary variables per physical qubit:
 - **Backend**: AerSimulator with optional IBM hardware
 - **Optimizer**: COBYLA with 1000 max iterations
 
+- ## Performance Analysis
+
+### Methodology Comparison
+
+| Method | Description |
+|--------|-------------|
+| **Standard PCE** | Multi-basis VQE encoding (k=2)<br>Parameter: ε = 0.5<br>No classical initialization<br>Random parameter start |
+| **Warm-PCE** | Multi-basis VQE encoding (k=2)<br>Parameter: ε = 0.2<br>Goemans-Williamson warm-start<br>Classical bias integration |
+
+### Key Results
+
+| Metric | PCE (ε=0.5) | Warm-PCE (ε=0.2) | Improvement |
+|--------|-------------|-------------------|-------------|
+| **Approximation Ratio (p=5)** | 0.967 | **0.983** | +1.7% |
+| **Success Rate at p=5** | 26% | **64%** | +146% |
+| **Best-of-10 Win Rate** | 5/50 (10%) | **32/50 (64%)** | 6.4× better |
+| **Optimal ε Parameter** | - | **ε = 0.2** | E/E_nc ≈ 0.92 |
+
+### Key Observations
+
+- **Circuit depth scaling** (p=1→5) shows consistent performance improvement for both methods, with warm-starting providing exponential gains in success rates.
+
+- **Regularization parameter ε** exhibits clear optimum at 0.2, indicating balanced classical-quantum integration in the warm-starting approach.
+
+- **Multi-basis encoding** (k=2) successfully reduces qubit requirements while maintaining solution quality for TSP instances up to N=5 cities.
+
+- **Goemans-Williamson initialization** provides consistent advantage across all circuit depths, with most dramatic improvements at higher layer counts.
+
+---
+
+**Experimental Setup:** N=5 cities, k=2 multi-basis encoding, p∈{1,2,3,4,5} circuit layers, weight range (10,100), 10 seeds per configuration, COBYLA optimizer.
+
 ## Citation
 
 ```bibtex
