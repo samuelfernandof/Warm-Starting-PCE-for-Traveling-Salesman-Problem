@@ -212,5 +212,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Project Link** - [https://github.com/samuelfernandof/Warm-Starting-PCE-for-Traveling-Salesman-Problem](https://github.com/samuelfernandof/Warm-Starting-PCE-for-Traveling-Salesman-Problem)
 
 ---
-
-⭐ **Star this repo** if you find it useful!
